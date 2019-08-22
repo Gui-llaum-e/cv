@@ -15,3 +15,22 @@
   top: 0;
   z-index: 1;
 }
+#barreTop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 5px black;
+}
+/* #nom{
+  display: flex;
+  justify-content: flex-start;
+}
+#iconeMenu{
+  display: flex;
+  align-items: end
+} */
+.active {
+  text-shadow: 0 0 20px #00fffc, 2px 3px 3px #141414, 0 0 100px #00d4d1;
+  color: #00fffc;
+  background-color: #262626;
+}
