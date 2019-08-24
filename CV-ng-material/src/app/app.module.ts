@@ -21,6 +21,7 @@ import { EnvoiEmailComponent } from './nav/pages/envoi-email/envoi-email.compone
 import { BottomComponent } from './nav/pages/bottom/bottom.component';
 import { ErrorComponent } from './nav/pages/error/error.component';
 import { SoftSkillsEtLanguesComponent } from './nav/pages/soft-skills-et-langues/soft-skills-et-langues.component';
+import { HeadComponent } from './nav/pages/accueil/head/head.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SoftSkillsEtLanguesComponent } from './nav/pages/soft-skills-et-langues
     EnvoiEmailComponent,
     BottomComponent,
     ErrorComponent,
-    SoftSkillsEtLanguesComponent
+    SoftSkillsEtLanguesComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule,
