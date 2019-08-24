@@ -1,4 +1,7 @@
 .sidenav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 100%;
 }
 
@@ -19,7 +22,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 5px black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position: fixed;
+}
+#barreTop:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 /* #nom{
   display: flex;
@@ -34,3 +42,7 @@
   color: #00fffc;
   background-color: #262626;
 }
+
+// .main {
+//   margin-top: 40px;
+// }

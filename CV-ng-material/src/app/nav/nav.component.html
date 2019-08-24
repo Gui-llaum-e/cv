@@ -1,39 +1,54 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport position="end"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
 
     <mat-nav-list>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/accueil']">Accueil</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/info-perso']">Informations personnelles</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/a-propos']">À propos</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/competences']">Compétences</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/soft-skills']">Soft Skills & Langues</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/formations']">Formations</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/parcours-pro']">Parcours professionnel</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/mes-services']">Mes services</a>
-      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/envoi-email']">Contact</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/accueil']">Accueil</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/info-perso']">Informations personnelles</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/a-propos']">À
+        propos</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/competences']">Compétences</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/soft-skills-et-langues']">Soft Skills & Langues</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/formations']">Formations</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/parcours-pro']">Parcours professionnel</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/mes-services']">Mes services</a>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+        [routerLink]="['/envoi-email']">Contact</a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <mat-toolbar color="white" id="barreTop">
-        <span id="nom">[ ]  Guillaume TRANAIN</span>
-      <button
-        type="button" id="iconeMenu"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <span id="nom">[ ] Guillaume TRANAIN</span>
+      <button type="button" id="iconeMenu" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
 
     </mat-toolbar>
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
-
+    <main>
+      <router-outlet></router-outlet>
+      <!-- <app-accueil></app-accueil>
+    <app-info-perso></app-info-perso>
+    <app-a-propos></app-a-propos>
+    <app-competences></app-competences>
+    <app-soft-skills-et-langues></app-soft-skills-et-langues>
+    <app-formations></app-formations>
+    <app-parcours-pro></app-parcours-pro>
+    <app-mes-services></app-mes-services>
+    <app-envoi-email></app-envoi-email>
+    <app-bottom></app-bottom> -->
+    </main>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
