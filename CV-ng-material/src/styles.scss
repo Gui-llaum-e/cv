@@ -6,3 +6,12 @@ html, body { height: 100%;
 }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: RobotoItalic;
+  src: url(assets/font/Roboto/Roboto-Italic.ttf)
+}
+@font-face {
+  font-family: LemonMilk;
+  src: url(assets/font/lemon_milk/LemonMilklight.otf)
+}
