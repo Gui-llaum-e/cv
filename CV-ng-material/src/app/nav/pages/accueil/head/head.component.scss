@@ -12,8 +12,15 @@ h1 {
   font-size: 35px;
   font-family: LemonMilk;
 }
+/* a changer */
+h1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 h2 {
   font-family: RobotoItalic;
   font-size: 20px;
-
+}
+/* a changer */
+h2:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
