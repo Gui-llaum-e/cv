@@ -1,8 +1,8 @@
 :host{
     display : flex;
     flex-direction: column;
-/*     justify-content: space-evenly;
- */    align-items: center;
+/*     justify-content: space-evenly;*/    
+    align-items: center;
     background-color: black;
     height: calc(100vh - 57px);
     width: 100%;
@@ -30,5 +30,18 @@ h3 {
     color: whitesmoke
 }
 mat-icon {
-    color : goldenrod
+    color : goldenrod;
+    font-size: 40px;
+}
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+img {
+    width: 30px;
+    height: 30px;
+}
+#linkedin {
+    background-color: #0077B5
 }
