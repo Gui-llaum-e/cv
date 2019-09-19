@@ -15,8 +15,12 @@ h2 {
 h3 {
     font-style : italic;
     color : grey;
-    font-size: 10px; 
+    font-size: 10px;
 }
+h4 {
+    margin-top: 10px;
+}
+
 #infoPerso { 
     display: flex;
     flex-direction: column;
@@ -29,14 +33,21 @@ h3 {
     align-items: center;
     color: whitesmoke
 }
+#adresse {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
 mat-icon {
     color : goldenrod;
     font-size: 40px;
+    margin-bottom: 10px;
 }
 .logos {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top : 10px;
 }
 img {
     width: 30px;
