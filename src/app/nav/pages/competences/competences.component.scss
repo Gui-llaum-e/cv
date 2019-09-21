@@ -1,0 +1,26 @@
+:host{
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;  
+    align-items: center;
+    background-color: black;
+    height: calc(100vh - 57px);
+    width: 100%;
+    font-size: 13px;
+}
+h2 {
+    font-style : italic;
+    color : grey;
+    font-size: 20px;   
+}
+/* h3 {
+    font-style : italic;
+    color : whitesmoke;
+    font-size: 15px;
+} */
+
+.listesCompetences {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
