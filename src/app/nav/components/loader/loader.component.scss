@@ -1,0 +1,172 @@
+$count: 10;
+$time: 2; //in seconds
+$size: 100;
+$color: #ffffff;
+
+.holder {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #2D2F48;
+}
+
+.preloader {
+  /* size */
+  width: $size + px;
+  height: $size + px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: rotatePreloader $time + s infinite ease-in;
+}
+@keyframes rotatePreloader {
+  0% {
+  transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+  transform: translateX(-50%) translateY(-50%) rotateZ(-360deg);
+  }
+}
+.preloader div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.preloader div:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 10%;
+  height: 10%;
+  background-color: $color;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+@for $i from 1 through $count {
+  .preloader div:nth-child(#{$i}) {
+    transform: rotateZ(((360 / $count) * ($i - 1)) + deg);
+    animation: rotateCircle + $i $time + s infinite linear;
+    z-index: $count - $i;
+  }
+  @keyframes rotateCircle#{$i} {
+    #{percentage(((50 / $count) * ($i - 1)) / 100)} {
+      opacity: 0;
+    }
+    #{percentage((((50 / $count) + 0.0001) * ($i - 1)) / 100)} {
+      opacity: 1;
+      transform: rotateZ((0 - ((360 / $count) * ($i - 2))) + deg);
+    }
+    #{percentage((((50 / $count) * ($i - 0)) + 2) / 100)} {
+      transform: rotateZ((0 - ((360 / $count) * ($i - 1))) + deg);
+    }
+    #{percentage(((50 + ((50 / $count) * ($i - 0))) + 2) / 100)} {
+      transform: rotateZ((0 - ((360 / $count) * ($i - 1))) + deg);
+    }
+    100% {
+      transform: rotateZ((0 - ((360 / $count) * ($count - 1))) + deg);
+      opacity: 1;
+    }
+  }
+}
+
+
+/* 
+ body {
+    background: #282828;
+  }
+  
+  svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  
+  .stroke-still {
+    stroke: #232323;
+  }
+  
+  .stroke-animation {
+    -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+            animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  
+  @-webkit-keyframes stroke-spacing {
+    0% {
+      stroke-dasharray: 0 200;
+    }
+    45% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 200 200;
+    }
+    90% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+    100% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+  }
+  
+  @keyframes stroke-spacing {
+    0% {
+      stroke-dasharray: 0 200;
+    }
+    45% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 200 200;
+    }
+    90% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+    100% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+  }
+  
+  @-webkit-keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #643232; }
+    25% { stroke: #327864; }
+    49% { stroke: #327864; }
+    50% { stroke: #32326e; }
+    74% { stroke: #32326e; }
+    75% { stroke: #78325a; }
+    99% { stroke: #78325a; }
+  }
+  
+  @keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #643232; }
+    25% { stroke: #327864; }
+    49% { stroke: #327864; }
+    50% { stroke: #32326e; }
+    74% { stroke: #32326e; }
+    75% { stroke: #78325a; }
+    99% { stroke: #78325a; }
+  }
+   */

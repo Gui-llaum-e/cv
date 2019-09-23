@@ -1,15 +1,15 @@
-import { BottomComponent } from './nav/pages/bottom/bottom.component';
-import { EnvoiEmailComponent } from './nav/pages/envoi-email/envoi-email.component';
-import { MesServicesComponent } from './nav/pages/mes-services/mes-services.component';
-import { InfoPersoComponent } from './nav/pages/info-perso/info-perso.component';
-import { FormationsComponent } from './nav/pages/formations/formations.component';
-import { CompetencesComponent } from './nav/pages/competences/competences.component';
-import { AProposComponent } from './nav/pages/a-propos/a-propos.component';
+import { BottomComponent } from './nav/components/bottom/bottom.component';
+import { EnvoiEmailComponent } from './nav/components/envoi-email/envoi-email.component';
+import { MesServicesComponent } from './nav/components/mes-services/mes-services.component';
+import { InfoPersoComponent } from './nav/components/info-perso/info-perso.component';
+import { FormationsComponent } from './nav/components/formations/formations.component';
+import { CompetencesComponent } from './nav/components/competences/competences.component';
+import { AProposComponent } from './nav/components/a-propos/a-propos.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AccueilComponent } from './nav/pages/accueil/accueil.component';
-import { ParcoursProComponent } from './nav/pages/parcours-pro/parcours-pro.component';
-import { SoftSkillsEtLanguesComponent } from './nav/pages/soft-skills-et-langues/soft-skills-et-langues.component';
+import { AccueilComponent } from './nav/components/accueil/accueil.component';
+import { ParcoursProComponent } from './nav/components/parcours-pro/parcours-pro.component';
+import { SoftSkillsEtLanguesComponent } from './nav/components/soft-skills-et-langues/soft-skills-et-langues.component';
 
 const routes: Routes = [
   {path: '', component: AccueilComponent },

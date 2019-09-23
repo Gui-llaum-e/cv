@@ -8,20 +8,22 @@ import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 // tslint:disable-next-line: max-line-length
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
-import { AccueilComponent } from './nav/pages/accueil/accueil.component';
-import { InfoPersoComponent } from './nav/pages/info-perso/info-perso.component';
-import { AProposComponent } from './nav/pages/a-propos/a-propos.component';
-import { CompetencesComponent } from './nav/pages/competences/competences.component';
-import { SoftSkillsComponent } from './nav/pages/soft-skills-et-langues/soft-skills/soft-skills.component';
-import { LanguesComponent } from './nav/pages/soft-skills-et-langues/langues/langues.component';
-import { ParcoursProComponent } from './nav/pages/parcours-pro/parcours-pro.component';
-import { FormationsComponent } from './nav/pages/formations/formations.component';
-import { MesServicesComponent } from './nav/pages/mes-services/mes-services.component';
-import { EnvoiEmailComponent } from './nav/pages/envoi-email/envoi-email.component';
-import { BottomComponent } from './nav/pages/bottom/bottom.component';
-import { ErrorComponent } from './nav/pages/error/error.component';
-import { SoftSkillsEtLanguesComponent } from './nav/pages/soft-skills-et-langues/soft-skills-et-langues.component';
-import { HeadComponent } from './nav/pages/accueil/head/head.component';
+import { AccueilComponent } from './nav/components/accueil/accueil.component';
+import { InfoPersoComponent } from './nav/components/info-perso/info-perso.component';
+import { AProposComponent } from './nav/components/a-propos/a-propos.component';
+import { CompetencesComponent } from './nav/components/competences/competences.component';
+import { SoftSkillsComponent } from './nav/components/soft-skills-et-langues/soft-skills/soft-skills.component';
+import { LanguesComponent } from './nav/components/soft-skills-et-langues/langues/langues.component';
+import { ParcoursProComponent } from './nav/components/parcours-pro/parcours-pro.component';
+import { FormationsComponent } from './nav/components/formations/formations.component';
+import { MesServicesComponent } from './nav/components/mes-services/mes-services.component';
+import { EnvoiEmailComponent } from './nav/components/envoi-email/envoi-email.component';
+import { BottomComponent } from './nav/components/bottom/bottom.component';
+import { ErrorComponent } from './nav/components/error/error.component';
+import { SoftSkillsEtLanguesComponent } from './nav/components/soft-skills-et-langues/soft-skills-et-langues.component';
+import { HeadComponent } from './nav/components/accueil/head/head.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoaderComponent } from './nav/components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { HeadComponent } from './nav/pages/accueil/head/head.component';
     BottomComponent,
     ErrorComponent,
     SoftSkillsEtLanguesComponent,
-    HeadComponent
+    HeadComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { HeadComponent } from './nav/pages/accueil/head/head.component';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
