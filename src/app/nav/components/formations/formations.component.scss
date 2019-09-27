@@ -1,8 +1,24 @@
 :host {
-    background-color: black;
+  background-color: black;
+  height: calc(100vh - 57px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;;
 }
 
- body {
+.example-card {
+  max-width: 290px;
+  margin: 5px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+/*  body {
     background: #282828;
   }
   
@@ -92,4 +108,4 @@
     75% { stroke: #78325a; }
     99% { stroke: #78325a; }
   }
-  
+   */
