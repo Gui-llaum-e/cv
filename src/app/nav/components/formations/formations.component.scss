@@ -1,21 +1,44 @@
-:host {
+:host{
+  display : flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  align-items: center;
   background-color: black;
   height: calc(100vh - 57px);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;;
 }
-
-.example-card {
+h2 {
+  font-style : italic;
+  color : grey;
+  font-size: 20px;   
+}
+.blocFormation {
   max-width: 290px;
   margin: 5px;
+  background-color: whitesmoke;
+  border: 3px solid goldenrod;
 }
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('/assets/icons/1.svg');
   background-size: cover;
+}
+
+mat-card-title{
+  color: goldenrod
+}
+
+mat-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 5px;
+
+}
+p{
+  font-size: 14px;
+  text-align: justify;
 }
 
 /*  body {
