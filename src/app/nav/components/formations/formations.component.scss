@@ -4,7 +4,7 @@
   justify-content: flex-start;  
   align-items: center;
   background-color: black;
-  height: calc(100vh - 57px);
+  height: calc(100% - 57px);
   width: 100%;
 }
 h2 {
@@ -18,7 +18,10 @@ h2 {
   background-color: whitesmoke;
   border: 3px solid goldenrod;
 }
+mat-card {
+  position: inherit;
 
+}
 .example-header-image {
   background-image: url('/assets/icons/1.svg');
   background-size: cover;
