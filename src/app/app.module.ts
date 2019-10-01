@@ -1,29 +1,43 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatSidenavModule,
+  MatSortModule,
+  MatTableModule,
+  MatToolbarModule,
+} from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './nav/nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-// tslint:disable-next-line: max-line-length
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
-import { AccueilComponent } from './nav/components/accueil/accueil.component';
-import { InfoPersoComponent } from './nav/components/info-perso/info-perso.component';
 import { AProposComponent } from './nav/components/a-propos/a-propos.component';
-import { CompetencesComponent } from './nav/components/competences/competences.component';
-import { SoftSkillsComponent } from './nav/components/soft-skills-et-langues/soft-skills/soft-skills.component';
-import { LanguesComponent } from './nav/components/soft-skills-et-langues/langues/langues.component';
-import { ParcoursProComponent } from './nav/components/parcours-pro/parcours-pro.component';
-import { FormationsComponent } from './nav/components/formations/formations.component';
-import { MesServicesComponent } from './nav/components/mes-services/mes-services.component';
-import { EnvoiEmailComponent } from './nav/components/envoi-email/envoi-email.component';
-import { BottomComponent } from './nav/components/bottom/bottom.component';
-import { ErrorComponent } from './nav/components/error/error.component';
-import { SoftSkillsEtLanguesComponent } from './nav/components/soft-skills-et-langues/soft-skills-et-langues.component';
+import { AccueilComponent } from './nav/components/accueil/accueil.component';
 import { HeadComponent } from './nav/components/accueil/head/head.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { BottomComponent } from './nav/components/bottom/bottom.component';
+import { CompetencesComponent } from './nav/components/competences/competences.component';
+import { EnvoiEmailComponent } from './nav/components/envoi-email/envoi-email.component';
+import { ErrorComponent } from './nav/components/error/error.component';
+import { FormationsComponent } from './nav/components/formations/formations.component';
+import { InfoPersoComponent } from './nav/components/info-perso/info-perso.component';
 import { LoaderComponent } from './nav/components/loader/loader.component';
+import { MesServicesComponent } from './nav/components/mes-services/mes-services.component';
+import { ParcoursProComponent } from './nav/components/parcours-pro/parcours-pro.component';
+import { LanguesComponent } from './nav/components/soft-skills-et-langues/langues/langues.component';
+import { SoftSkillsEtLanguesComponent } from './nav/components/soft-skills-et-langues/soft-skills-et-langues.component';
+import { SoftSkillsComponent } from './nav/components/soft-skills-et-langues/soft-skills/soft-skills.component';
+import { NavComponent } from './nav/nav.component';
+import {MatSliderModule} from '@angular/material/slider';
+
+// tslint:disable-next-line: max-line-length
 
 @NgModule({
   declarations: [
@@ -61,6 +75,7 @@ import { LoaderComponent } from './nav/components/loader/loader.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatSliderModule,
     MatProgressSpinnerModule
   ],
   providers: [],
