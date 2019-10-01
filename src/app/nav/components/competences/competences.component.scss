@@ -4,7 +4,7 @@
     justify-content: flex-start;  
     align-items: center;
     background-color: black;
-    height: calc(100vh - 57px);
+    height: calc(100% - 57px);
     width: 100%;
     font-size: 13px;
 }
@@ -13,12 +13,15 @@ h2 {
     color : grey;
     font-size: 20px;   
 }
-/* h3 {
+h4 {
     font-style : italic;
     color : whitesmoke;
     font-size: 15px;
-} */
+    font-family: LemonMilk;
+}
 
+
+/* 
 .listesCompetences {
     display: flex;
     flex-direction: column;
@@ -28,5 +31,12 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-/*     align-items: center;*/
+}
+/*     align-items: center; */
+
+mat-icon {
+    color: goldenrod;
+}
+h3.mat-line {
+    display: flex;
 }
