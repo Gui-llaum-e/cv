@@ -1,42 +1,31 @@
-:host{
-    display : flex;
+:host {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;  
     align-items: center;
     background-color: black;
     height: calc(100% - 57px);
     width: 100%;
-    font-size: 13px;
 }
 h2 {
-    font-style : italic;
-    color : grey;
-    font-size: 20px;   
+    font-style: italic;
+    color: grey;
+    font-size: 20px;
+}
+h3.mat-subheader {
+    color: goldenrod;
+    font-family: LemonMilk;
+    font-size: 20px;
 }
 h4 {
-    font-style : italic;
-    color : whitesmoke;
-    font-size: 15px;
+    font-style: italic;
+    color: whitesmoke;
     font-family: LemonMilk;
 }
-
-
-/* 
-.listesCompetences {
+#competencesBloc {
     display: flex;
     flex-direction: column;
-    color: whitesmoke;
+    align-self: flex-start;
 }
-#autresCompetences{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-/*     align-items: center; */
-
 mat-icon {
     color: goldenrod;
-}
-h3.mat-line {
-    display: flex;
 }
