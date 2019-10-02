@@ -4,7 +4,7 @@
     justify-content: flex-start;  
     align-items: center;
     background-color: black;
-    height: calc(100vh - 57px);
+    height: calc(100% - 57px);
     width: 100%;
   }
   h2 {
@@ -12,3 +12,39 @@
     color : grey;
     font-size: 20px;   
   }
+  .blocFormation {
+    max-width: 290px;
+    margin: 5px;
+    background-color: whitesmoke;
+    border: 3px solid goldenrod;
+  }
+  mat-card {
+    position: inherit;
+  
+  }
+  .example-header-image {
+    background-image: url('/assets/icons/2.svg');
+    background-size: cover;
+  }
+  
+  mat-card-title{
+    color: goldenrod
+  }
+  
+  mat-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    font-style: italic;
+  }
+  p{
+    font-size: 14px;
+    text-align: justify;
+  }
+.dates {  // mat-card-footer div
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-left: 10px;
+}
