@@ -13,7 +13,9 @@ import {
   MatTableModule,
   MatToolbarModule,
 } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -35,7 +37,7 @@ import { LanguesComponent } from './nav/components/soft-skills-et-langues/langue
 import { SoftSkillsEtLanguesComponent } from './nav/components/soft-skills-et-langues/soft-skills-et-langues.component';
 import { SoftSkillsComponent } from './nav/components/soft-skills-et-langues/soft-skills/soft-skills.component';
 import { NavComponent } from './nav/nav.component';
-import {MatSliderModule} from '@angular/material/slider';
+
 
 // tslint:disable-next-line: max-line-length
 
@@ -76,6 +78,7 @@ import {MatSliderModule} from '@angular/material/slider';
     MatPaginatorModule,
     MatSortModule,
     MatSliderModule,
+    MatFormFieldModule,
     MatProgressSpinnerModule
   ],
   providers: [],
