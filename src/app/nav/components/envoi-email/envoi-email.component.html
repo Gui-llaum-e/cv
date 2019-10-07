@@ -1,16 +1,48 @@
 <div>
     <h2>Restons en contact !</h2>
 </div>
-<!-- <div class="bloc1">
-    <mat-form-field class="nom">
-        <input matInput placeholder="Nom *" name="nom" id="nom" class="form-control" formControlName="nom">
+
+  <form id="contactForm">
+    <mat-form-field appearance="outline" class="champs">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Exemple : Tranain">
+      <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
-    <mat-form-field class="prenom">
-        <input matInput placeholder="Prénom *" name="prenom" id="prenom" class="form-control"
-            formControlName="prenom">
+
+    <mat-form-field appearance="outline" class="champs">
+      <mat-label>Prénom</mat-label>
+      <input matInput placeholder="Exemple : Guillaume">
+      <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
-    <mat-form-field class="adresse">
-        <textarea matInput placeholder="Adresse *" name="adresse" id="adresse" class="form-control"
-            formControlName="adresse"></textarea>
+
+    <mat-form-field appearance="outline" class="champs">
+      <mat-label>e-mail</mat-label>
+      <input matInput placeholder="@"> <!-- [formControl]="emailFormControl" [errorStateMatcher]="matcher" -->
+      <mat-icon matSuffix>mail</mat-icon>
     </mat-form-field>
-</div> -->
+
+    <mat-form-field appearance="outline" class="champs">
+      <mat-label>Numéro de téléphone</mat-label>
+      <input matInput placeholder="06">
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="champs">
+        <mat-label>Sujet</mat-label>
+        <input matInput placeholder="Exemple : Entretien d'embauche">
+        <mat-icon matSuffix>subject</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="champs">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Contenu de votre message"></textarea>
+        <mat-icon matSuffix>message</mat-icon>
+        <mat-hint>Max. 200 caractères</mat-hint>
+      </mat-form-field>
+</form>
+
+<div id="submit">
+    <button mat-raised-button id="sendButton">
+        <mat-icon>send</mat-icon> Envoyer
+    </button>
+</div>

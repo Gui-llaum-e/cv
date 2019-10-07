@@ -4,28 +4,58 @@
     justify-content: flex-start;  
     align-items: flex-start;
     background-color: black;
-    height: calc(100vh - 57px);
+    height: calc(100% - 57px);
     width: 100%;
   }
-  h2 {
+h2 {
     font-style : italic;
     color : goldenrod;
     font-size: 20px;   
     font-family: LemonMilk;
     margin-left: 25px;
     margin-top: 40px;
-  }
-  .coordonee {
-    display: flex;
-    flex-direction: row;
-    margin: 2% 10%;
-
-    mat-form-field {
-        width: 200%;
-    }
 }
 
-.bloc1 {
-    display: flex;
-    flex-direction: column;
+div#submit{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+button#sendButton{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  background-color: goldenrod;
+  color: whitesmoke;
+  margin: 5px;
+/*   position: inherit;
+ */
+}
+
+form#contactForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+.champs {
+  color: goldenrod;
+  font-size: 16px;
+  width: 300px;
+
+}
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+     color: goldenrod!important;
+  }
+  mat-form-field {
+     .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: goldenrod!important;
+     }
+  }
 }

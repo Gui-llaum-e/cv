@@ -12,8 +12,11 @@ import {
   MatSortModule,
   MatTableModule,
   MatToolbarModule,
+  MatFormFieldModule,
+  MatInputModule,
+  ErrorStateMatcher,
+  ShowOnDirtyErrorStateMatcher,
 } from '@angular/material';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
@@ -79,9 +82,13 @@ import { NavComponent } from './nav/nav.component';
     MatSortModule,
     MatSliderModule,
     MatFormFieldModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
-  providers: [],
+  providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
