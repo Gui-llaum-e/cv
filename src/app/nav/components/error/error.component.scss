@@ -1,0 +1,315 @@
+/* violet spinner */
+body {
+    background-color: #222;
+  }
+  #preloader {
+/*       position: fixed; */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+  }
+  #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+  }
+  #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+  }
+  @-webkit-keyframes spin {
+      0%   {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }
+  @keyframes spin {
+      0%   {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }
+
+/* Loading Loader */
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    background: #191a1a;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-family: ‘Arial Narrow’, sans-serif;
+    font-weight: 100;
+    font-size: 1.1em;
+    color: #a3e1f0;
+  }
+  
+  span {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  
+  .let1 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.2s;
+  }
+  
+  .let2 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.3s;
+  }
+  
+  .let3 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.4s;
+  }
+  
+  .let4 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.5s;
+  
+  }
+  
+  .let5 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.6s;
+  }
+  
+  .let6 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.7s;
+  }
+  
+  .let7 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.8s;
+  }
+  
+  @keyframes drop {
+      10% {
+          opacity: 0.5;
+      }
+      20% {
+          opacity: 1;
+          top: 3.78em;
+          transform: rotateX(-360deg);
+      }
+      80% {
+          opacity: 1;
+          top: 3.78em;
+          transform: rotateX(-360deg);
+      }
+      90% {
+          opacity: 0.5;
+      }
+      100% {
+          opacity: 0;
+          top: 6.94em
+      }
+  }
+  
+
+
+  /* spinner carré  */ 
+$color: #fd7000;
+$size: 12px;
+$time: 1;
+
+main {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background:  #090707;
+}
+
+.dank-ass-loader {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+   .row {
+      display: flex;
+   }
+}
+
+.arrow {
+   width: 0; 
+   height: 0;
+   margin: 0 (-$size / 2);
+   border-left: $size solid transparent;
+   border-right: $size solid transparent;
+   border-bottom: ($size * 1.8) solid $color;
+   animation: blink $time + s infinite;
+   filter: drop-shadow(0 0 ($size * 1.5) $color);
+    
+   &.down {
+      transform: rotate(180deg);
+   }
+   
+   @for $i from 1 through 18 {
+      &.outer-#{$i} {
+         animation-delay: -($time / 18) * $i + s;
+      }  
+   }
+
+   @for $i from 1 through 6 {
+      &.inner-#{$i} {
+         animation-delay: -($time / 6) * $i + s;
+      }  
+   }  
+}
+
+@keyframes blink {
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
+}
+
+/* orange spinner  */ 
+body {
+    background: #282828;
+  }
+  
+  svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  
+  .stroke-still {
+    stroke: #232323;
+  }
+  
+  .stroke-animation {
+    -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+            animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  
+  @-webkit-keyframes stroke-spacing {
+    0% {
+      stroke-dasharray: 0 200;
+    }
+    45% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 200 200;
+    }
+    90% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+    100% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+  }
+  
+  @keyframes stroke-spacing {
+    0% {
+      stroke-dasharray: 0 200;
+    }
+    45% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 200 200;
+    }
+    90% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+    100% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+  }
+  
+  @-webkit-keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #643232; }
+    25% { stroke: #327864; }
+    49% { stroke: #327864; }
+    50% { stroke: #32326e; }
+    74% { stroke: #32326e; }
+    75% { stroke: #78325a; }
+    99% { stroke: #78325a; }
+  }
+  
+  @keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #643232; }
+    25% { stroke: #327864; }
+    49% { stroke: #327864; }
+    50% { stroke: #32326e; }
+    74% { stroke: #32326e; }
+    75% { stroke: #78325a; }
+    99% { stroke: #78325a; }
+  }
+  
