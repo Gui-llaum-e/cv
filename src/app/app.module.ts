@@ -1,5 +1,6 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatButtonModule,
   MatCardModule,
@@ -84,6 +85,7 @@ import { NavComponent } from './nav/nav.component';
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatInputModule,
+    HttpClientModule,
     MatFormFieldModule,
   ],
   providers: [
